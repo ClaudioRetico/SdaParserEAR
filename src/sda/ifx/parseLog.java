@@ -1,4 +1,4 @@
-package sda;
+package sda.ifx;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

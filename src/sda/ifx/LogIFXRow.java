@@ -1,4 +1,4 @@
-package sda;
+package sda.ifx;
 
 public class LogIFXRow{
 	public LogIFXRow() {
