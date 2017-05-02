@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import sda.ifx.parseLog;
+import sda.nomn.Lanciatore;
 
 /**
  * Servlet implementation class theParser
@@ -33,7 +34,9 @@ public class theParser extends HttpServlet {
 		  String rsp=null;
 		try {
 			rsp = new parseLog().parseIFXLog();
-			response.getWriter().append("Risposta del parser: "+rsp);
+			response.getWriter().append("Risposta del parser INFORMIX: "+rsp);
+			new Lanciatore().main(null);
+			response.getWriter().append("/n Completato PArsin NMON: "+rsp);
 		} catch (Exception e) {
 			response.getWriter().append("Parsing in errore");
 		} catch (Throwable e) {
